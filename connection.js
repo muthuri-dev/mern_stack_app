@@ -19,8 +19,14 @@ mongoose.connect(mongoURL).then(function(){
 });
                          
 //middlewares
-
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
+//app.use(cors());
 
 
 //routes
+app.get('/',function(req,res){
+  res.json({
+    message:'server is running',
+  });
+})
