@@ -18,3 +18,9 @@ mongoose.connect(mongoURL).then(function(){
   console.log('error:  ',err);
 });
                          
+//middlewares
+
+
+
+
+//routes
