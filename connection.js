@@ -5,6 +5,7 @@ const multer=require('multer');
 const bodyParser=require('body-parser');
 const mongoURL='mongodb://0.0.0.0/mern-data';
 const app=express();
+const user=require('./models/schema');
 //connecting to the database and server
 mongoose.connect(mongoURL).then(function(){
   app.listen(PORT,function(error){
