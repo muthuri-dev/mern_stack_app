@@ -4,7 +4,7 @@
   "description": "backend react server",
   "main": "connection.js",
   "scripts": {
-    "dev":"nodemon ./connection.js",
+    "dev": "nodemon ./connection.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
