@@ -34,7 +34,18 @@ app.get('/',function(req,res){
 });
 
 app.post('/create',function(req,res){
-  const newNote=new note({
-
+  const newNote = new note({
+    title:req.body.title,
+    note:req.body.note,
   });
+  newNote.save();
+  console.log(newNote);
 });
+
+app.get('/notes',function(req,res){
+  note.find({}).then(function(foundNotes){
+    res.json(foundNotes);
+  }).catch(function(error){
+    console.log('getting notes error:  ',error);
+  });
+})

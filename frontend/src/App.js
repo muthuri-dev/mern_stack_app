@@ -1,5 +1,7 @@
 
 import{BrowserRouter as Switch,Routes,Route}from 'react-router-dom';
+import React from 'react';
+
 import Navbar from './components/navbar';
 import NotFound from './components/notfound';
 import Create from './views/create';

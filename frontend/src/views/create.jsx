@@ -1,6 +1,8 @@
 
 import { useState } from "react";
 import axios from 'axios';
+import React from 'react';
+
 
 const Create = () => {
     const[title,setTitle]=useState('');
@@ -13,7 +15,7 @@ const Create = () => {
             title:title,
             note:note
         }
-        axios.post('http://localhost/8000/create',newNote)
+        axios.post('http://localhost:8000/create',newNote)
     }
     
     return ( 
