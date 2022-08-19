@@ -38,8 +38,14 @@ app.post('/create',function(req,res){
     title:req.body.title,
     note:req.body.note,
   });
-  newNote.save();
-  console.log(newNote);
+  newNote.save(function(err){
+    if(err){
+      console.log('saving error:  ',err);
+    }else{
+      console.log('saved to the database');
+    }
+  });
+  console.log('Created  ',newNote);
 });
 
 app.get('/notes',function(req,res){
